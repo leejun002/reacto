@@ -1,0 +1,10 @@
+2023-05-28 10:37:41 [resurrection] info : 8080 포트에서 서버 가동 중
+2023-05-28 10:37:48 [resurrection] info : GET / 304 "홈"
+2023-05-28 10:38:05 [resurrection] info : 8080 포트에서 서버 가동 중
+2023-05-28 10:38:11 [resurrection] info : GET / 304 "홈"
+2023-05-28 10:39:05 [resurrection] info : 8080 포트에서 서버 가동 중
+2023-05-28 10:39:08 [resurrection] info : GET / 304 "홈"
+2023-05-28 10:39:10 [resurrection] info : GET /hanstone 304 "칸스톤 페이지"
+2023-05-28 10:39:20 [resurrection] info : GET / 304 "홈"
+2023-05-28 10:41:35 [resurrection] info : 8080 포트에서 서버 가동 중
+2023-05-28 10:41:38 [resurrection] info : GET / 304 "홈"

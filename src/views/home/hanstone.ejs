@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>크린앤Q</title>
+  <link rel="stylesheet" href="/css/home/hanstone.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@80,400,0,0"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="https://kit.fontawesome.com/1a2cc02835.js" crossorigin="anonymous"></script>
+  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+
+</head>
+
+<body>
+  <div class="nav-container">
+    <nav>
+      <ul class="mobile-nav">
+        <li>
+          <div class="menu-icon-container">
+            <div class="menu-icon">
+              <span class="line-1"></span>
+              <span class="line-2"></span>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <a href="/" class="link-logo">
+            <span class="logochar">Q</span>
+          </a>
+        </li>
+        <!-- <li>
+          <a href="#" class="link-search"><i class="fa fa-search"></i></a>
+        </li> -->
+        <li>
+          <a id="user2" class="link-user2"><i class="fa-solid fa-user-circle"></i></a>
+        </li>
+      </ul>
+
+      <ul class="desktop-nav">
+        <li>
+          <a href="/" class="link-logo">
+            <span class="logochar">Q</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">칸스톤</a>
+        </li>
+        <li>
+          <a href="#">홈샤시·샤시</a>
+        </li>
+        <li>
+          <a href="#">중문</a>
+        </li>
+        <li>
+          <a href="#">BATH</a>
+        </li>
+        <li>
+          <a href="#">주방/가구</a>
+        </li>
+        <li>
+          <a href="#">바닥재</a>
+        </li>
+        <li>
+          <a href="#">벽지</a>
+        </li>
+        <li>
+          <a href="#">타일</a>
+        </li>
+        <li>
+          <a href="#">붙박이장·현관장</a>
+        </li>
+        <li>
+          <a href="#">견적상담</a>
+        </li>
+        <li>
+          <a class="link-search"><i class="fa fa-search"></i></a>
+        </li>
+        
+        <a id="user" class="link-user"><i class="fa-solid fa-user-circle"></i></a>
+        
+      </ul>
+    </nav>
+
+    <div class="search-container hide">
+      <div class="link-search"><i class="fa fa-search"></i></div>
+      <div class="search-bar">
+        <form action="">
+          <input type="text" placeholder="칸스톤">
+        </form>
+      </div>
+      <div class="link-close">
+      </div>
+
+      <div class="quick-links">
+        <!-- <h2> Quick Links </h2> -->
+        <ul>
+          <li>
+            <a href="#"> 크린앤Q 방문 질문 </a> 
+          </li>
+          <li>
+            <a href="#"> 장판 </a> 
+          </li>
+          <li>
+            <a href="#"> 타일 </a> 
+          </li>
+          <li>
+            <a href="#"> 샤시 </a> 
+          </li>
+          <li>
+            <a href="#"> 도어 </a> 
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mobile-search-container">
+      <div class="link-search"><i class="fa fa-search"></i></div>
+      <div class="search-bar">
+        <form action="">
+          <input type="text" placeholder="칸스톤">
+        </form>
+      </div>
+      <span class="cancel-btn">Cancel</span>
+
+      <div class="quick-links">
+        <!-- <h2> Quick Links </h2> -->
+        <ul>
+          <li>
+            <a href="#"> 크린앤Q 방문 질문 </a> 
+          </li>
+          <li>
+            <a href="#"> 장판 </a> 
+          </li>
+          <li>
+            <a href="#"> 타일 </a> 
+          </li>
+          <li>
+            <a href="#"> 샤시 </a> 
+          </li>
+          <li>
+            <a href="#"> 도어 </a> 
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="overlay"></div>
+
+  <div>
+    <ul id="options" style="display:none;">
+      {% if user %}
+        <br>
+        <span id="memb">{{user.id}}</span><span id="hello">님 안녕하세요</span>
+        <li class="option">
+          <a href="/profile">
+            <span class="iconify" data-icon="material-symbols:manage-accounts-sharp" style="font-size: 15px;"></span>
+            <span>계정</span>
+          </a>
+        </li>
+        <li class="option">
+          <a href="/logout">
+            <span class="iconify" data-icon="fluent:arrow-enter-20-filled" style="font-size: 15px;" data-flip="horizontal"></span>
+            <span>로그아웃</span>
+          </a>
+        </li>
+      {% else %}
+        <li class="option">
+          <a href="/login">
+            <span class="iconify" data-icon="fluent:arrow-enter-20-filled" style="font-size: 15px;"></span>
+            <span>로그인</span>
+          </a>
+        </li>
+        <li class="option">
+          <a href="/profile">
+            <span class="iconify" data-icon="material-symbols:manage-accounts-sharp" style="font-size: 15px;"></span>
+            <span>계정</span>
+          </a>
+        </li>
+      {% endif %}
+    </ul>
+  </div>
+
+
+<section>
+  <div class="parallax-item">
+    <div class="mv_vid">
+      <video class="main_vid" poster="/pic/hanstone/sec0/videoposter.jpg" autoplay loop playsinline muted>
+          <source src="/pic/hanstone/sec0/origin_rate_c.mp4" type="video/mp4">
+          Your browser does not support the video tag
+      </video>
+    </div>
+    <p class="first">자연의 화려함을 품다</p>
+  </div>
+</section>
+
+<div id="smooth-wrapper">
+  <div class="stage" id="smooth-content">
+
+      <section class="sec sec1" id="slide-1">
+        <div class="sec1-1"></div>
+        <div class="sec1-2"></div>
+        <div class="sec1-3"></div>
+        
+        <div class="content1">
+          <p class="txt2">
+            칸스톤은 그 자체로 자연을 재해석하여 표면 성능을 향상시킬 뿐 아니라 돌의 본질적인 자연미를 담아냅니다.
+          </p>
+        </div>
+        <img class="img img--2" src="/pic/hanstone/sec1/hanlogo.png" />
+      </section>
+
+
+      <section class="sec sec3" id="slide-3">
+        <div class="content3">
+          <p class="txt3">변함없는 아름다움.</p>
+        </div>
+        <div class="content4">
+          <p class="txt4">| 압축강도<br>대리석의 1.7배</p>
+          <p class="txt5">| 물 흡수율<br>1/10000 미만</p>
+          <p class="txt6">| 원료<br>순도 99% 천연 Quartz</p>
+        </div>
+      </section>
+
+      <section class="sec sec4" id="slide-4">
+        <img class="img img--8" src="/pic/hanstone/sec4/cert_black.png" />
+        <img class="img img--4" src="/pic/hanstone/sec4/italybreton.png" />
+        <p class="txt7">최고 권위 환경, 위생인증 싹쓸이<br> 그야말로 칸.</p>
+        <p class="txt8">이태리 breton사의<br> 최첨단 설비로 공정되는 칸스톤</p>
+      </section>
+
+      <section class="sec sec5" id="slide-5">
+        <p class="txt9">CLASSIC</p>
+        <div class="swiper-left">
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <a class="swipe" href="#">
+                  <div class="text-wrap">
+                    <h2>스완코튼</h2>
+                    <p>RS301</p>
+                  </div>
+                  <img src='/pic/hanstone/swiper/classic/swancotton.jpg'>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="swipe" href="#">
+                  <div class="text-wrap2">
+                    <h2>옵시디안 블랙</h2>
+                    <p>CT401</p>
+                  </div>
+                  <img src='/pic/hanstone/swiper/classic/obsidianblack.jpg'>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="swipe" href="#">
+                  <div class="text-wrap">
+                    <h2>로얄블랑</h2>
+                    <p>BA205</p>
+                  </div>
+                  <img src='/pic/hanstone/swiper/classic/royaleblanc.jpg'>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="swipe" href="#">
+                  <div class="text-wrap">
+                    <h2>스피치오 화이트</h2>
+                    <p>CT402</p>
+                  </div>
+                  <img src='/pic/hanstone/swiper/classic/specchiowhite.jpg'>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="swipe" href="#">
+                  <div class="text-wrap2">
+                    <h2>마띠에르</h2>
+                    <p>BT354</p>
+                  </div>
+                  <img src='/pic/hanstone/swiper/classic/matier.jpg'>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="swipe" href="#">
+                  <div class="text-wrap">
+                    <h2>비안코 캔버스</h2>
+                    <p>BA201</p>
+                  </div>
+                  <img src='/pic/hanstone/swiper/classic/biancocanvas.jpg'>
+                </a>
+              </div>
+            </div>
+            
+            <div class="swiper-pagination"></div>
+          
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          
+          </div>
+        </div>
+      </section>
+
+      <section class="sec sec6" id="slide-6">
+        <p class="txt10">IRREGULAR</p>
+        <div class="swiper-right">
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <a class="swipe" href="#">
+                  <div class="text-wrap">
+                    <h2>파타고니아</h2>
+                    <p>SK505</p>
+                  </div>
+                  <img src='/pic/hanstone/swiper/irregular/patagonia.jpg'>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="swipe" href="#">
+                  <div class="text-wrap">
+                    <h2>마터호른</h2>
+                    <p>K5406</p>
+                  </div>
+                  <img src='/pic/hanstone/swiper/irregular/matterhorn.jpg'>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="swipe" href="#">
+                  <div class="text-wrap2">
+                    <h2>로키마운틴</h2>
+                    <p>K4504</p>
+                  </div>
+                  <img src='/pic/hanstone/swiper/irregular/rockymountain.jpg'>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="swipe" href="#">
+                  <div class="text-wrap">
+                    <h2>에덴</h2>
+                    <p>SK506</p>
+                  </div>
+                  <img src='/pic/hanstone/swiper/irregular/eden.jpg'>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="swipe" href="#">
+                  <div class="text-wrap">
+                    <h2>르블랑</h2>
+                    <p>K5405</p>
+                  </div>
+                  <img src='/pic/hanstone/swiper/irregular/leblanc.jpg'>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="swipe" href="#">
+                  <div class="text-wrap">
+                    <h2>엘바 화이트</h2>
+                    <p>K5404</p>
+                  </div>
+                  <img src='/pic/hanstone/swiper/irregular/elbawhite.jpg'>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="swipe" href="#">
+                  <div class="text-wrap">
+                    <h2>아틀란틱 그레이</h2>
+                    <p>GV781</p>
+                  </div>
+                  <img src='/pic/hanstone/swiper/irregular/atlanticgray.jpg'>
+                </a>
+              </div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+          
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec sec7" id="slide-7">
+        <p class="txt11">STREAM</p>
+        <div class="swiper-left2">
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <a class="swipe" href="#">
+                  <div class="text-wrap">
+                    <h2>칼라카타 오로스</h2>
+                    <p>CC602</p>
+                  </div>
+                  <img src='/pic/hanstone/swiper/stream/calacattaoros.jpg'>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="swipe" href="#">
+                  <div class="text-wrap">
+                    <h2>칼라카타 노벨라</h2>
+                    <p>CC601</p>
+                  </div>
+                  <img src='/pic/hanstone/swiper/stream/calacattanobela.jpg'>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="swipe" href="#">
+                  <div class="text-wrap">
+                    <h2>엠브로셜 캐널</h2>
+                    <p>SU765</p>
+                  </div>
+                  <img src='/pic/hanstone/swiper/stream/ambrosialcanal.jpg'>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="swipe" href="#">
+                  <div class="text-wrap">
+                    <h2>칼라카타 임모탈</h2>
+                    <p>LV606</p>
+                  </div>
+                  <img src='/pic/hanstone/swiper/stream/calacattaimmortal.jpg'>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="swipe" href="#">
+                  <div class="text-wrap">
+                    <h2>윈터캐널</h2>
+                    <p>SU762</p>
+                  </div>
+                  <img src='/pic/hanstone/swiper/stream/wintercanal.jpg'>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="swipe" href="#">
+                  <div class="text-wrap">
+                    <h2>트랜퀼리티</h2>
+                    <p>RU613</p>
+                  </div>
+                  <img src='/pic/hanstone/swiper/stream/tranquility.jpg'>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="swipe" href="#">
+                  <div class="text-wrap">
+                    <h2>스트라토</h2>
+                    <p>CA701</p>
+                  </div>
+                  <img src='/pic/hanstone/swiper/stream/strato.jpg'>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="swipe" href="#">
+                  <div class="text-wrap2">
+                    <h2>블랙스톰</h2>
+                    <p>LV604</p>
+                  </div>
+                  <img src='/pic/hanstone/swiper/stream/blackstorm.jpg'>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="swipe" href="#">
+                  <div class="text-wrap">
+                    <h2>앰브로셜 누보</h2>
+                    <p>MO626</p>
+                  </div>
+                  <img src='/pic/hanstone/swiper/stream/ambrosialnuovo.jpg'>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec sec8" id="slide-8">
+        <p class="txt12">SUBTLE</p>
+        <div class="swiper-right2">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a class="swipe" href="#">
+                  <div class="text-wrap2">
+                    <h2>루나 쉐도우</h2>
+                    <p>WI764</p>
+                  </div>
+                  <img src='/pic/hanstone/swiper/subtle/lunarshadow.jpg'>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="swipe" href="#">
+                  <div class="text-wrap">
+                    <h2>덴버</h2>
+                    <p>WT773</p>
+                  </div>
+                  <img src='/pic/hanstone/swiper/subtle/denver.jpg'>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="swipe" href="#">
+                  <div class="text-wrap2">
+                    <h2>루나 화이트</h2>
+                    <p>WI763</p>
+                  </div>
+                  <img src='/pic/hanstone/swiper/subtle/lunarwhite.jpg'>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="swipe" href="#">
+                  <div class="text-wrap2">
+                    <h2>브릭샌드</h2>
+                    <p>WI780</p>
+                  </div>
+                  <img src='/pic/hanstone/swiper/subtle/bricksand.jpg'>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="swipe" href="#">
+                  <div class="text-wrap2">
+                    <h2>애쉬 콘크리트</h2>
+                    <p>WI790</p>
+                  </div>
+                  <img src='/pic/hanstone/swiper/subtle/ashconcrete.jpg'>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="swipe" href="#">
+                  <div class="text-wrap">
+                    <h2>윈터워킹</h2>
+                    <p>RU657</p>
+                  </div>
+                  <img src='/pic/hanstone/swiper/subtle/winterwalking.jpg'>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="swipe" href="#">
+                  <div class="text-wrap2">
+                    <h2>소피아</h2>
+                    <p>RU608</p>
+                  </div>
+                  <img src='/pic/hanstone/swiper/subtle/sofia.jpg'>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="swipe" href="#">
+                  <div class="text-wrap">
+                    <h2>몬도</h2>
+                    <p>WT720</p>
+                  </div>
+                  <img src='/pic/hanstone/swiper/subtle/mondo.jpg'>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="swipe" href="#">
+                  <div class="text-wrap2">
+                    <h2>밀라디</h2>
+                    <p>RU612</p>
+                  </div>
+                  <img src='/pic/hanstone/swiper/subtle/milady.jpg'>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="swipe" href="#">
+                  <div class="text-wrap">
+                    <h2>인디안펄</h2>
+                    <p>RU658</p>
+                  </div>
+                  <img src='/pic/hanstone/swiper/subtle/indianpearl.jpg'>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="swipe" href="#">
+                  <div class="text-wrap">
+                    <h2>아이스캡</h2>
+                    <p>RU654</p>
+                  </div>
+                  <img src='/pic/hanstone/swiper/subtle/icecap.jpg'>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="swipe" href="#">
+                  <div class="text-wrap2">
+                    <h2>블랙 스노우</h2>
+                    <p>RU656</p>
+                  </div>
+                  <img src='/pic/hanstone/swiper/subtle/blacksnow.jpg'>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="swipe" href="#">
+                  <div class="text-wrap">
+                    <h2>아스펜</h2>
+                    <p>RU601</p>
+                  </div>
+                  <img src='/pic/hanstone/swiper/subtle/aspen.jpg'>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="swipe" href="#">
+                  <div class="text-wrap">
+                    <h2>스노우 필드</h2>
+                    <p>RU679</p>
+                  </div>
+                  <img src='/pic/hanstone/swiper/subtle/snowfield.jpg'>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="swipe" href="#">
+                  <div class="text-wrap2">
+                    <h2>아라미스</h2>
+                    <p>RU607</p>
+                  </div>
+                  <img src='/pic/hanstone/swiper/subtle/aramis.jpg'>
+                </a>
+              </div>
+            </div>
+            
+            <div class="swiper-pagination"></div>/
+          
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          
+            <!-- If we need scrollbar -->
+            <!-- <div class="swiper-scrollbar"></div> -->
+          </div>
+        </div>
+      </section>
+
+      <section class="sec sec9" id="slide-9">
+        <p class="txt13"><span class="txt13-span1">크린앤Q</span>의 칸스톤 <span class="txt13-span2">시공사례</span></p>
+      </section>
+
+      <section class="sec sec10" id="slide-10">
+        <div class="cards">
+          <div class="card">
+            <div class="card-pic1"></div>
+            <div class="card-txt">
+              <p class="txt14">2021.11 고양시 덕양구 은빛마을 6단지 프라웰 <br>아일랜드식탁 - 칸스톤 <span class="txt14-span">파타고니아</span></p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-pic2"></div>
+            <div class="card-txt">
+              <p class="txt14">2021.11 고양시 덕양구 은빛마을 6단지 프라웰 <br>주방상판 - 칸스톤 <span class="txt14-span">파타고니아</span></p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-pic8"></div>
+            <div class="card-txt">
+              <p class="txt14">2022.07 서울시 마포구 성산동 현대1차아파트<br>주방상판 - 칸스톤 <span class="txt14-span">루나화이트</span></p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-pic9"></div>
+            <div class="card-txt">
+              <p class="txt14">2022.10 경기도 광주 목현동 전원주택 <br>주방상판&아일랜드 - 칸스톤 <span class="txt14-span">루나쉐도우</span></p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-pic10"></div>
+            <div class="card-txt">
+              <p class="txt14">2022.10 경기도 광주 목현동 전원주택 <br>주방상판 - 칸스톤 <span class="txt14-span">앰브로셜</span> / 아일랜드 - 칸스톤 <span class="txt14-span">루나쉐도우</span></p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-pic11"></div>
+            <div class="card-txt">
+              <p class="txt14">2022.10 경기도 광주 목현동 전원주택 <br>주방상판 - 칸스톤 <span class="txt14-span">앰브로셜</span></p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-pic12"></div>
+            <div class="card-txt">
+              <p class="txt14">2023.01 고양시 화정동 별빛마을 9단지 <br>화장실 젠다이 - 칸스톤 <span class="txt14-span">루나화이트</span></p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-pic13"></div>
+            <div class="card-txt">
+              <p class="txt14">2023.01 고양시 화정동 별빛마을 9단지 <br>주방상판 - 칸스톤 <span class="txt14-span">루나화이트</span></p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-pic14"></div>
+            <div class="card-txt">
+              <p class="txt14">2023.02-04 서울시 중랑구 면목동 DS빌딩 <br>주방상판 - 칸스톤 <span class="txt14-span">루나화이트</span></p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-pic15"></div>
+            <div class="card-txt">
+              <p class="txt14">2023.02-04 서울시 중랑구 면목동 DS빌딩 <br>주방상판 - 칸스톤 <span class="txt14-span">루나화이트</span></p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-pic2-2"></div>
+            <div class="card-txt">
+              <p class="txt14">2021.11 고양시 덕양구 은빛마을 6단지 프라웰 <br>파우더룸 - 칸스톤 <span class="txt14-span">윈터워킹</span></p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-pic3"></div>
+            <div class="card-txt">
+              <p class="txt14">2021.10 고양시 덕양구 별빛마을 10단지 <br>주방상판&아일랜드식탁 - 칸스톤 <span class="txt14-span">트랜퀄리티</span></p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-pic4"></div>
+            <div class="card-txt">
+              <p class="txt14">2022.05 경기도 광주 목현동 주택 <br>주방상판 - 칸스톤 <span class="txt14-span">루나쉐도우</span></p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-pic5"></div>
+            <div class="card-txt">
+              <p class="txt14">2022.05 고양시 화정동 별빛마을 5단지<br>주방상판 - 칸스톤 <span class="txt14-span">트랜퀄리티</span></p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-pic6"></div>
+            <div class="card-txt">
+              <p class="txt14">2022.05 고양시 화정동 별빛마을 7단지<br>화장실 젠다이 - 칸스톤 <span class="txt14-span">루나쉐도우</span></p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-pic6-2"></div>
+            <div class="card-txt">
+              <p class="txt14">화장실 젠다이 - 칸스톤 <span class="txt14-span">루나화이트</span></p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-pic6-3"></div>
+            <div class="card-txt">
+              <p class="txt14">2022.08 고양시 화정동 별빛마을 10단지 <br>화장실 젠다이 - 칸스톤 <span class="txt14-span">윈터워킹</span></p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-pic7"></div>
+            <div class="card-txt">
+              <p class="txt14">2022.06 고양시 덕양구 화정동 별빛마을 부영8단지<br>주방상판 - 칸스톤 <span class="txt14-span">밀라디</span></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+  </div>
+</div>
+
+
+
+</body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/EasePack.min.js"></script>
+  <script src="/js/home/hanstone.js" defer></script>
+
+</html>

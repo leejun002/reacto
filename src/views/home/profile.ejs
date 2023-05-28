@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jeune</title>
+<head>
+<body style="font-family: 'Noto Sans KR', sans-serif;">
+    <br>
+    {% if user %}
+    <h1 style="text-align:center">
+        {{user.id}}님의
+        비밀번호는 {{user.psword}} 입니다
+    </h1>
+    {% endif %}
+</body>
